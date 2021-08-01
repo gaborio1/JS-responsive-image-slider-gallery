@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS image slider gallery</title>
+    <link rel="stylesheet" href="slider.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main-content">
+      <div class="main-column">
+        <div class="slider-title-container">
+          <h1 class="slider-title">before/after gallery</h1>
+        </div>
+
+        <div class="gallery-container">
+          <div class="left-column column">
+            <div class="portrait-style img-slider-container">
+              <div class="portrait-style after img-container">
+                <p class="img-text">color</p>
+                <img
+                  class="portrait-style"
+                  src="images/portrait-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portrait-style before img-container">
+                <p class="img-text">bw</p>
+                <img
+                  class="portrait-style"
+                  src="images/portrait-5-before.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="slider"></div>
+            </div>
+          </div>
+
+          <div class="spacer-column-div">
+            <p>spacer div 24pc width</p>
+          </div>
+
+          <div class="right-column column">
+            <div class="landscape-style img-slider-container">
+              <div class="landscape-style after img-container">
+                <p class="img-text">edited</p>
+                <img class="landscape-style" src="images/nature-1.jpg" alt="" />
+              </div>
+              <div class="landscape-style before img-container">
+                <p class="img-text">raw</p>
+                <img
+                  class="landscape-style"
+                  src="images/nature-1-before.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="slider"></div>
+            </div>
+            <div class="landscape-style img-slider-container">
+              <div class="landscape-style after img-container">
+                <p class="img-text">img2</p>
+                <img class="landscape-style" src="images/nature-4.jpg" alt="" />
+              </div>
+              <div class="landscape-style before img-container">
+                <p class="img-text">img1</p>
+                <img class="landscape-style" src="images/nature-2.jpg" alt="" />
+              </div>
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="slider.js"></script>
+  </body>
+</html>
