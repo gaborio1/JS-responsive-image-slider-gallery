@@ -1,204 +1,138 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
-  font-family: "Roboto", sans-serif;
-  background: var(--main-background);
+	font-family: "Roboto", sans-serif;
 }
 
-/* TITLE: Enzee */
 h1 {
-  font-size: 60px;
-
-  font-weight: 400;
-  /* font-weight: 700; */
+  	font-size: 60px;
+	font-weight: 400;
 }
 
 .main-content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	/* border: 3px solid red; */
 }
-
+  
 .main-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  max-width: 1400px;
-  /* border: 3px solid orange; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	width: 90%;
+	max-width: 1400px;
+	/* border: 3px solid blue; */
 }
-
-.slider-title-container {
-  margin: 100px 0px 100px 0px;
-  /* border: 3px solid tomato; */
-}
-
-.slider-title-container h2 {
-  font-weight: 400;
+  
+.title-container {
+	text-align: center;
+	margin: 50px 0px 0px 0px;
+	/* border: 3px solid green; */
 }
 
 .gallery-container {
-  display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  /* width: 1400px;
-    max-width: var(--main-content-1400); */
-  width: 90%;
-  margin-bottom: 100px;
-  /* border: 3px solid rgb(21, 255, 0); */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1400px;
+	height: fit-content;
+	margin: 50px 0 100px 0;
+	/* border: 3px solid orange; */
 }
-
-.spacer-column-div {
-  /* display: none; */
-  width: 25%;
-  text-align: center;
-  padding-top: 50px;
-  /* background: rgba(255, 99, 71, 0.32); */
-}
-
-.spacer-column-div p {
-  display: none;
-}
-
-/* .column {
-  display: flex;
-  justify-content: center;
-  border: 3px solid goldenrod;
-} */
-
-.right-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
+  
 .img-slider-container {
-  position: relative;
-
-  width: 30vw;
-  height: auto;
-
-  /* border: 3px solid rgb(76, 210, 222); */
+  	position: relative;
 }
-
-.img-slider-container.portrait-style {
-  /* !!!!!!!!!!!!!!!! */
-  width: 25vw;
-  max-width: 400px;
-  height: 600px;
-  max-height: 600px;
-
-  /* border: 3px solid rgb(236, 78, 16); */
-}
-
-.img-slider-container.landscape-style {
-  /* !!! flex MESSES UP SLIDER !!! */
-  /* display: flex;
-  justify-content: flex-end; */
-  /* !!!!!!!!!!!!!!!! */
-  width: 35vw;
-  /* width: 550px; */
-
-  max-width: 540px;
-
-  height: 300px;
-  max-height: 280px;
-
-  /* border: 3px solid rgb(207, 222, 76); */
-}
-
+  
 .img-slider-container:hover {
-  cursor: ew-resize;
+  	cursor: ew-resize;
 }
-
+  
 /* !!! width/height SHOULD BE THE SAME ON ALL CONTAINERS AND IMAGES !!! */
-
+  
 /* ALL LANDSCAPE STYLE CONTAINERS AND IMAGES, BOTH after AND before */
 .landscape-style {
-  /* BOTH vw/h AND px WORK */
-  /* width: 50vw;
-    height: 40vh; */
-
-  /* width: 750px;
-  height: 270px; */
-  /* !!!!!!!!!!!!!!!!!!! */
-  width: 35vw;
-  max-width: 540px;
-  height: auto;
-  max-height: 270px;
-  /* height: 300px; */
-  /* max-height: 270px; */
+	width: 75vw;
+	max-width: 1400px;
+	height: 50vh;
+	max-height: 700px;
 }
 
 /* ALL PORTRAIT STYLE CONTAINERS AND IMAGES, BOTH after AND before */
 .portrait-style {
-  /* width: 25vw;
-    height: 75vh; */
-
-  /* width: 400px;
-  height: 600px; */
-  /* !!!!!!!!!!!!!!!!!!!!! */
-  width: 25vw;
-  max-width: 400px;
-  height: auto;
+	width: 75vw;
+	max-width: 1400px;
+	height: 80vh;
+	max-height: 2100px;
 }
 
+.img-slider-container.portrait-style {
+  	margin: 5% 0;
+}
+
+
+
 .img-container {
-  /*  IMG-CONTAINERS STACKED ON TOP OF EACH OTHER */
-  position: absolute;
+	/*  IMG-CONTAINERS STACKED ON TOP OF EACH OTHER */
+	position: absolute;
 }
 
 /* HIDE CONTENT THAT IS NOT VISIBLE WHEN CHANGING WIDTH. BOTH landscape AND portrait */
 .img-container.before {
-  /* width HAS TO MATCH .slider { left: 33.33% } */
-  width: 33.33%;
-  overflow: hidden;
+	/* width HAS TO MATCH .slider { left: 33.33% } */
+	width: 33.33%;
+	overflow: hidden;
 }
-
+  
 /* ALL IMAGES */
-.container img {
-  object-fit: cover;
+.gallery-container img {
+  	object-fit: cover;
 }
-
+  
 .img-text {
-  position: absolute;
-  font-weight: 300;
-  /* color: rgb(0, 0, 0); */
-  color: rgb(255, 255, 255);
+	position: absolute;
+	font-size: 30px;
+	font-weight: 300;
+	/* color: rgb(0, 0, 0); */
+	color: rgb(255, 255, 255);
 }
-
+  
 /* TOP LEFT TEXT */
 .after .img-text {
-  right: 1rem;
-  top: 0.5rem;
+	right: 1rem;
+	top: 0.5rem;
 }
-
+  
 /* TOP RIGHT TEXT */
 .before .img-text {
-  left: 1rem;
-  top: 0.5rem;
+	left: 1rem;
+	top: 0.5rem;
 }
-
+  
 .slider {
-  position: absolute;
-  z-index: 2;
-  width: 2px;
-  height: 100%;
-  top: 0;
-  /* DEFAULT X POSITION */
-  left: 33.33%;
-  /* SLIDER BAR WILL BE CENTERED PERFECTLY REGARDLESS OF WIDTH */
-  transform: translate(-50%, 0%);
-  /* background: rgb(0, 0, 0); */
-  background: rgb(255, 255, 255);
-  /* !!! The element does not react to pointer events LIKE hover, click !!! */
-  /* THIS IS TO PREVENT IMG FORM FLICKERING WHEN BAR IS HOVERED */
-  pointer-events: none;
+	position: absolute;
+	z-index: 2;
+	width: 2px;
+	height: 100%;
+	top: 0;
+	/* DEFAULT X POSITION */
+	left: 33.33%;
+	/* SLIDER BAR WILL BE CENTERED PERFECTLY REGARDLESS OF WIDTH */
+	transform: translate(-50%, 0%);
+	/* background: rgb(0, 0, 0); */
+	background: rgb(255, 255, 255);
+	/* !!! The element does not react to pointer events LIKE hover, click !!! */
+	/* THIS IS TO PREVENT IMG FORM FLICKERING WHEN BAR IS HOVERED */
+	pointer-events: none;
 }
